@@ -28,6 +28,7 @@ public class LoanDAO {
 			PreparedStatement ps = con.prepareStatement(str);
 			ps.setDouble(1, loanId);
 			ResultSet rs = ps.executeQuery();
+			System.out.println("");
 			System.out.println("Loan Reminder....");
 			double remainAmount = 0;
 			while (rs.next()) {

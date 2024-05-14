@@ -28,7 +28,7 @@ public class LoanDAO {
 			PreparedStatement ps = con.prepareStatement(str);
 			ps.setDouble(1, loanId);
 			ResultSet rs = ps.executeQuery();
-
+			String str6 = "1";
 			double remainAmount = 0;
 			while (rs.next()) {
 				remainAmount = rs.getDouble(1);

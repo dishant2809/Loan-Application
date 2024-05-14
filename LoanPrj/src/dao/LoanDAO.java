@@ -20,7 +20,7 @@ public class LoanDAO {
 	LoanValidation loanValidation = new LoanValidation();
 	LoanOperation loanOperation=new LoanOperation();
 	
-
+//Data Access Object Class
 	public static double loanRemain(Connection con, long loanId) throws SQLException {
 
 		try {
@@ -28,7 +28,7 @@ public class LoanDAO {
 			PreparedStatement ps = con.prepareStatement(str);
 			ps.setDouble(1, loanId);
 			ResultSet rs = ps.executeQuery();
-
+			System.out.println("Loan Reminder....");
 			double remainAmount = 0;
 			while (rs.next()) {
 				remainAmount = rs.getDouble(1);
